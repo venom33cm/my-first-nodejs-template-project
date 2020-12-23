@@ -1,0 +1,407 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+.header hr{
+    color: white;
+}
+.header-section h1{
+    line-height: 2;
+    font-weight: bold;
+   
+}
+.navbar{
+    background: linear-gradient(to right, rgb(232, 93, 240),rgb(209, 61, 137),rgb(247, 47, 47)) !important;
+}
+.navbar a{
+    text-transform: capitalize;
+}
+
+.nav-link{
+    color: #ffffff;
+}
+.navbar a:hover{
+    color: black;
+}
+    
+
+
+.header{
+    background-image:linear-gradient(rgba(206, 142, 230,0.8),rgba(206, 142, 230,0.8)),url("https://clipartstation.com/wp-content/uploads/2017/11/dance-clipart-png.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:100%;
+    height:100vh;
+    position: relative;
+    clip-path: polygon(100% 0%, 100% 75%, 50% 100%, 0 75%, 0 0);
+}
+.header:before{
+    content: "";
+    position: absolute;
+    background: linear-gradient(to right, rgb(232, 93, 240),rgb(209, 61, 137),rgb(247, 47, 47));
+    opacity: 0.4;
+    z-index: -1;
+    top: 0;
+    left:0;
+    bottom: 0;
+    right:0;
+}
+
+.header-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 120px;
+}
+
+.header-section p{
+    margin: 25px 120px;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.header-buttons a{
+    border: 2px solid white;
+    padding: 5px;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight:bold;
+}
+.header-buttons a:hover{
+
+    color: black !important;
+    background:white;
+    box-shadow: 0px 0px 10px 0 rgb(0,0,0);
+    text-decoration: none;
+    
+}
+
+ .icon i{
+    color:white !important;
+    position: relative;
+     animation-name: arrow ;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+
+} 
+
+ .icon :hover{
+    color: black !important;
+} 
+
+i.fas.fa-chevron-down {
+    width:50px !important;
+}
+@keyframes arrow
+{
+  0%,100%{position:absolute; top:495px; left:48.5%; opacity: 0;}
+  25%,75%{position:absolute; top:520px; left:48.5%; opacity: 0.7;}
+  50%{position:absolute; top:545px; left:48.5% ;opacity: 1 ;}
+}
+/* **************************about us section start********************** */
+.aboutus{
+    height: auto;
+    width: 100%;
+    position: relative;
+}
+
+.box{
+    width:100%;
+    padding-right: 10px;
+    padding-left: 10px;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.about{
+    margin-top: 75px;
+    padding-bottom: 30px;
+    padding: 0px 25px;
+    min-height:200px;
+    border-radius: 10px;
+    box-shadow: 0 0 25px 0 rgb(20,27,202);
+    transition: 0.5s ;
+}
+.about p{
+    padding: 12px;
+}
+
+.about:hover{
+    transform: translateY(-20px);
+    background: rgb(48, 101, 101) ;
+    box-shadow: 0 0 25px 0 rgb(48, 101, 101);
+    cursor: pointer;
+}
+
+
+.pics img{
+    height:100px !important;
+    width:100px  !important;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.aboutus:before{
+    content: "";
+    position: absolute;
+    background: linear-gradient(330deg,rgb(209, 61, 137) 35%,rgb(247, 47, 47) 50%,rgb(255,255,255) 0%);
+    opacity: 0.4;
+    z-index: -1;
+    top: 0;
+    left:0;
+    bottom: 0;
+    right:0;
+}
+
+/* ******************services start************************* */
+
+.services{
+    height:100vh;
+    width:100%;
+
+}
+
+.dapa{
+    margin-top: 10px;
+    width: 100%;
+    padding:0 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 0 rgb(134, 127, 127);
+    text-align: center;
+}
+
+.dapa:hover{
+    background-color: turquoise;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 20px 0 rgb(29, 28, 28);
+    
+
+}
+.dapa p{
+    padding:10px;
+}
+
+.dapa img{
+    height:100px;
+    width:100px;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.carousel-indicators{
+    position: absolute;
+    right: 0;
+    bottom: -30px !important;
+}
+
+.carousel-indicators li{
+    background-color: #16c9f6 !important;
+}
+
+.carousel-indicators .active{
+    background-color: rgb(5, 48, 226) !important;
+    box-shadow: 0 0 5px 0 rgb(29, 28, 28);;
+
+}
+#carouselExampleIndicators{
+    margin-bottom: 100px !important;
+}
+
+
+
+
+
+
+/* ******************parallax img section start************************* */
+
+.parallax-img{
+    background: url("https://www.villagegym.co.uk/media/2885/zumba-class.jpg?center=0.26943005181347152,0.49833333333333335&mode=crop&width=1140&height=550&rnd=132122380060000000");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height:80vh;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+/* *****************footer starts*************** */
+.footer{
+    background-color: rgb(49, 39, 39);
+    color:white;
+}
+.footer i{
+    color: white !important;
+}
+.persona{
+    border-right: 4px solid white;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.persona ul{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.persona ul li{
+    list-style: none;
+    padding:12px;
+    text-decoration: none;
+}
+
+.sign-up h2{
+    line-height: 3rem;
+}
+
+.sign-up button{
+    margin-top: 15px;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+    width:auto;
+    outline: none;
+    border:none;
+}
+.sign-up button:hover{
+    background-color: #f0ad4e !important;
+    color:black !important;
+    cursor: pointer;
+    box-shadow: none;
+}
+
+
+footer{
+    background-color: #808080;
+    height:50px;
+    
+}
+
+footer p{
+    color: black;
+    padding: 12px;
+    
+}
+
+footer h2{
+    line-height: 0.8rem;
+}
+
+/* *************************responsiveness style starts************************** */
+@media(max-width:1200px){
+
+
+    .header-section{
+        margin-top: 95px;
+    }
+
+    .header-section h1{
+        font-size: 1.5rem;
+        line-height: 1.6rem;
+        text-align: center;
+        padding:9px;
+    }
+    .header-section p{
+        font-size: 0.8rem;
+        margin:9px 50px;
+        padding:5px
+    }
+
+    .navbar a{
+        text-align: center;
+    }
+
+    @keyframes arrow
+{
+  0%,100%{position:absolute; top:480px; left:43%; opacity: 0;}
+  25%,75%{position:absolute; top:505px; left:43%; opacity: 0.7;}
+  50%{position:absolute; top:530px; left:43% ;opacity: 1 ;}
+}
+
+.about{
+    padding:0 10px;
+}
+
+.about p{
+    font-size:0.8rem;
+    padding:5px;
+    text-align: center;
+}
+
+
+.dapa p{
+    padding:4px;
+    font-size: 0.8rem;
+}
+
+.sign-up h2{
+    line-height: 2rem;
+    font-size: 1.5rem;
+}
+
+.sign-up button{
+    font-size: 0.8rem !important;
+    margin-top: 5px;
+    margin-bottom: 9px;
+}
+.persona h1{
+    font-size: 1.8rem;
+}
+
+footer p{
+    padding:2px;
+    font-size: 0.8rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+

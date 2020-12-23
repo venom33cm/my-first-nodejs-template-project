@@ -1,0 +1,146 @@
+{{>template}}
+<style>
+    html,
+    body {
+        height: 100vh;
+    }
+
+    .boxy {
+        position: absolute;
+        top: 20%;
+        left: 10%;
+    }
+
+    .login {
+        position: relative;
+        background: url("https://img.grouponcdn.com/seocms/2AyJNdUZErWUT38rryLdNQBBrLUJ/ihs_0-116_15000_1__jpg_crop_jpeg-1080x648");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .craze {
+        margin-left: 40px !important;
+    }
+
+    form {
+        background: #F0F0F0;
+        width: 30%;
+        padding: 20px;
+        padding-right: 40px;
+        border-radius: 15px;
+        box-shadow: 0 2px 5px #888888;
+    }
+
+    .form-group {
+        display: flex;
+    }
+
+    .togbtn {
+        position: absolute;
+        left: 49%;
+        bottom: 7%;
+    }
+
+    .fa-key {
+        padding-right: 5px;
+    }
+
+    .fa-user {
+        padding-right: 9px;
+    }
+
+
+
+    footer {
+        position: relative;
+
+        width: 100%;
+    }
+
+    @media(max-width:1200px) {
+
+        .login {
+            overflow: hidden;
+        }
+
+        .boxy {
+            position: absolute;
+            top: 20%;
+           left:0%;
+        }
+
+        form{
+            width:95%;
+        }
+
+         form h1 {
+            font-size: 1.4rem;
+        }
+
+         .b1 {
+            font-size: 0.6rem;
+            width: auto !important;
+        }
+
+         .b2 {
+            font-size: 0.6rem;
+            width: auto !important;
+        }
+
+        .b3 {
+            font-size: 0.6rem;
+            width: auto !important;
+        }
+
+        ::placeholder {
+            font-size: 0.6rem !important;
+        }
+        form input{
+            width:auto;
+        }
+
+
+
+    }
+</style>
+
+<body>
+    {{>navbar}}
+
+    <section class="login">
+        <div class="container-fluid " id="logins">
+            <div class="row">
+                <div class="col-md-10 col-12 mx-auto my-auto  boxy">
+                    <form action="/login" method="POST" class="mx-auto mt-5">
+                        <h1 class="text-center font-weight-bold text-capitalize p-3">Login</h1>
+                        <div class="form-group font-weight-bold">
+                            <i class="fas fa-user fa-2x"></i> <input type="email" class="form-control"
+                                id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"
+                                name="email">
+                        </div>
+
+                        <div class="form-group font-weight-bold">
+                            <i class="fas fa-key fa-2x"></i><input type="password" class="form-control"
+                                id="exampleInputPassword1" placeholder="Password" name="Password">
+                        </div>
+                        <button type="submit"
+                            class="btn btn-primary mt-2 b1 btn-sm ml-4 craze font-weight-bold">Submit</button>
+                    </form>
+                    <div class="togbtn">
+                        <a href="/register"><button type="button" class="btn btn-primary b2 btn-sm">Register</button></a>
+                        <a href="/login"><button type="button" class="btn btn-secondary b3  btn-sm">login</button></a>
+                    </div>
+
+                </div>
+            </div>
+    </section>
+    {{>footer}}
+
+    {{>links}}
+</body>
+
+</html>

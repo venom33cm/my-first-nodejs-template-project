@@ -1,0 +1,56 @@
+{{>template}}
+{{>regstyle}}
+
+<body>
+    {{>navbar}}
+
+
+
+    <section class="register">
+        <div class="container " id="registers">
+            <div class="row">
+                <div class="col-md-10 col-12    boxy">
+                    <form action="/register" method="POST" class=" mx-auto mt-3">
+                        <h1 class="text-center font-weight-bold text-capitalize">register for your classes</h1>
+                        <div class="form-group font-weight-bold">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Enter email" name="email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group font-weight-bold">
+                            <label for="exampleInputPassword1">username</label>
+                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="username"
+                                name="username">
+                        </div>
+
+                        <div class="form-group font-weight-bold">
+                            <label for="exampleInputPassword1">phone-number</label>
+                            <input type="number" class="form-control" id="exampleInputPassword1"
+                                placeholder="phone-Number" name="phone">
+                        </div>
+                        <div class="form-group font-weight-bold">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password" name="Password">
+                        </div>
+                        <button type="submit" class="btn btn-primary b1  font-weight-bold">Submit</button>
+                        <div class="togbtn">
+                            <a href="/register"><button type="button" class="btn b2 btn-primary btn-sm">Register</button></a>
+                            <a href="/login"><button type="button" class="btn b3 btn-secondary btn-sm">login</button></a>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+    </section>
+
+
+    {{>footer}}
+
+    {{>links}}
+
+</body>
+
+</html>
