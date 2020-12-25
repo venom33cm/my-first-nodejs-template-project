@@ -1,5 +1,5 @@
 const mongoose =require("mongoose");
-require("dotenv/types").config();
+require("dotenv").config();
 mongoose.connect(process.env.ATLAS_URI || "mongodb://localhost:27017/myregistration",{
     useCreateIndex:true,
     useNewUrlParser:true,
