@@ -4,8 +4,8 @@ const app = express();
 const port = process.env.PORT || 3000;
 const hbs = require('hbs');
 const path = require('path');
-require("./db/conn");
-const Register = require("./models/registers");
+require("./client/src/db/conn");
+const Register = require("./client/src/models/registers");
 
 const staticpath = path.join(__dirname, "../public/");
 const templatepath = path.join(__dirname, "../templates/views");
