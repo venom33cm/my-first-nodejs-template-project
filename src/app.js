@@ -4,6 +4,13 @@ const app = express();
 const port = process.env.PORT || 3000;
 const hbs = require('hbs');
 const path = require('path');
+const bcryptjs = require('bcryptjs')
+const jwt=  require('jsonwebtoken');
+
+
+
+
+
 require("./db/conn");
 const Register = require("./models/registers");
 
@@ -27,6 +34,12 @@ app.post("/register", async (req, res) => {
     try {
 
         const userregister = new Register(req.body);
+
+        console.log("succes" + userregister);
+        //token generation
+        const token = await userregister.generateAuthToken();
+        console.log("mera token" + token);
+        //hashing the password
         await userregister.save();
         res.status(201).render("index");
 
@@ -44,7 +57,8 @@ app.post("/login", async (req, res) => {
         const email = req.body.email;
         const Password = req.body.Password;
         const mail = await Register.findOne({ email: email });
-        if(mail.Password===Password)
+        const compare = bcryptjs.compare(Password,mail.Password)
+        if(compare)
         {
             res.status(201).render("index");
         }
