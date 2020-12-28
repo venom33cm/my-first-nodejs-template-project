@@ -4,7 +4,7 @@ const Register = require("../models/registers")
 const auth = async (req,res,next)=>{
    try {
     const token = req.cookies.jwt;
-    const verifyuser=jwt.verify(token,process.env.SECRET_KEY);
+    const verifyuser=jwt.verify(token,process.env.SECRET_HASH);
     console.log(verifyuser);
     const user = await Register.findOne({_id:verifyuser._id})
     console.log(user.username);

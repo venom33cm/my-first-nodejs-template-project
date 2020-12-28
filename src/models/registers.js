@@ -36,18 +36,18 @@ const registerschema = new mongoose.Schema({
 
 })
 
-registerschema.methods.generateAuthToken = async function(){
-    try {
-        const token =jwt.sign({_id:this._id.toString()},process.env.SECRET_KEY);
-        this.tokens = this.tokens.concat({token});
-        await this.save();
-        return token;
-    } catch (error) {
-        res.send("eroor is "+ error);
-        console.log("error is "+ error);
-        
-    }
-}
+ registerschema.methods.generateAuthToken = async function(){
+  try {
+       const token =jwt.sign({_id:this._id.toString()},process.env.SECRET_HASH);
+       this.tokens = this.tokens.concat({token});
+         await this.save();
+         return token;
+     } catch (error) {
+         res.send("error is "+ error);
+         console.log("error is "+ error);
+      
+     }
+ }
 //hashing
 registerschema.pre("save",async function(next){
     if(this.isModified("Password")){

@@ -52,10 +52,10 @@ app.post("/register", async (req, res) => {
 
         //generating cookie
         res.cookie("jwt", token, {
-            expires: new Date(Date.now()+ 600000),
-            httpOnly: true
-        });
-        // console.log(cookie);
+             expires: new Date(Date.now()+60000),
+             httpOnly: true
+         });
+         //console.log(cookie);
         await userregister.save();
         res.status(201).render("index");
 
