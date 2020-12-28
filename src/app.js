@@ -43,19 +43,19 @@ app.post("/register", async (req, res) => {
 
         const userregister = new Register(req.body);
 
-        console.log("succes" + userregister);
+        //console.log("succes" + userregister);
         //token generation
         const token = await userregister.generateAuthToken();
-        console.log("mera token" + token);
+       // console.log("mera token" + token);
         //hashing the password
 
 
         //generating cookie
         res.cookie("jwt", token, {
-            expires: new Date(Date.now()+60000),
+            expires: new Date(Date.now()+ 600000),
             httpOnly: true
         });
-        console.log(cookie);
+        // console.log(cookie);
         await userregister.save();
         res.status(201).render("index");
 
