@@ -53,7 +53,8 @@ app.post("/register", async (req, res) => {
         //generating cookie
         res.cookie("jwt", token, {
              expires: new Date(Date.now()+60000),
-             httpOnly: true
+             httpOnly: true,
+             secure:true
          });
          //console.log(cookie);
         await userregister.save();
@@ -81,7 +82,8 @@ app.post("/login", async (req, res) => {
         //cookie generation
         res.cookie("jwt", token, {
             expires: new Date(Date.now()+300000),
-            httpOnly: true
+            httpOnly: true,
+            secure:true
         });
 
 
