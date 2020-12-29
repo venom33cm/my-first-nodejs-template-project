@@ -58,7 +58,7 @@ app.post("/register", async (req, res) => {
         // });
         //console.log(cookie);
 
-
+        await userregister.save();
 
 
 
@@ -98,13 +98,6 @@ app.post("/register", async (req, res) => {
         main().catch(console.error);
 
 
-
-
-
-
-
-
-        await userregister.save();
         res.status(201).render("index");
 
     } catch (error) {
