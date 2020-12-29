@@ -98,7 +98,7 @@ app.post("/register", async (req, res) => {
         main().catch(console.error);
 
 
-        res.status(201).render("index");
+        res.status(201).render("index",{layout:false});
 
     } catch (error) {
         res.status(400).send("invalid email "+error);
